@@ -1,0 +1,12 @@
+faiss-cpu
+google-genai
+joblib
+langchain-community
+langchain-huggingface
+langchain-text-splitters
+matplotlib
+pandas
+pydantic
+python-dotenv
+scikit-learn
+sentence-transformers

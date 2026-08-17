@@ -1,0 +1,16 @@
+Name,Department,Age,Salary,YearsExperience,EducationLevel,PerformanceScore,JobSatisfaction,RemoteWork,LeftCompany
+Areej,Engineering,25,70000,2,Bachelors,4,5,Yes,No
+Bilal,Sales,45,90000,15,Masters,3,3,No,Yes
+Charlie,HR,32,65000,7,Bachelors,5,4,Yes,No
+Danish,Engineering,29,85000,5,Masters,4,2,Yes,No
+Emaan,Marketing,38,75000,10,Bachelors,2,2,No,Yes
+Farah,Sales,27,60000,3,Bachelors,3,4,No,No
+Grace,Engineering,50,120000,25,PhD,5,5,Yes,No
+Henry,HR,41,80000,12,Masters,2,3,No,Yes
+Ivy,Marketing,30,72000,6,Bachelors,4,4,Yes,No
+Jack,Sales,36,95000,11,Masters,3,2,No,Yes
+Karen,Engineering,28,78000,4,Bachelors,5,5,Yes,No
+Leo,Finance,55,130000,30,Masters,4,3,No,Yes
+Muhammad,Finance,34,88000,8,Bachelors,5,4,Yes,No
+Noor,Marketing,26,62000,2,Bachelors,3,5,Yes,No
+Olivia,HR,48,105000,20,Masters,2,2,No,Yes
