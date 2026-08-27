@@ -54,6 +54,8 @@ class GeminiService:
         - conclusions
         - important dataset findings
 
+        Do not include unnecessary conversational details.
+
         Conversation:
 
         {conversation}
@@ -83,7 +85,7 @@ class GeminiService:
         )
 
         prompt = f"""
-        You are an AI data analyst that plans how a Python application should answer user questions.
+        You are an AI data analyst that plans how a Python application should answer user questions.  Your job is to classify the user's request into ONE of the following intents. 
 
         Dataset Information:
         {dataset_profile}
@@ -91,7 +93,12 @@ class GeminiService:
         Previous Conversation:
         {conversation_text}
 
-        Your job is to classify the user's request into ONE of the following intents.
+        Your job is to determine the correct intent from the following list of intents and return a structured request for the application. First determine whether the user is asking to 
+        PERFORM A NEW OPERATION or asking about something that ALREADY HAPPENED. If the user is asking about the result, interpretation, performance, 
+        metrics, conclusions, or findings of a previous operation, do NOT perform the operation again. Instead select explanation and use the previous machine learning 
+        result from the conversation to answer the question. 
+        
+        Follow-up questions must be interpreted using the conversation history.
 
         -------------------------------------------------------
         INTENT 1: explanation
@@ -134,18 +141,18 @@ class GeminiService:
         If the user requests a chart/visualization:
 
         Histogram
-        - x_column = numeric column
+        - x_column = numeric column being visualized
         - y_column = null
 
         Box Plot
-        - x_column = null
-        - y_column = numeric column
+        - x_column = numeric column being visualized
+        - y_column = null
 
         Scatter Plot
-        - x_column = independent variable
-        - y_column = dependent variable
+        - x_column = independent/first variable
+        - y_column = dependent/second variable
 
-        Ex:
+        Example:
         "Plot age versus salary"
         x_column = age
         y_column = salary
@@ -155,8 +162,8 @@ class GeminiService:
         - value_column = measured value
 
         Bar Chart
-        - group_by = categories
-        - value_column = values to plot
+        - group_by = categorical column
+        - value_column = numeric values to plot
 
         Do NOT use analysis if the user is asking for predictions, classification, regression, clustering, forecasting, or model training.
 
